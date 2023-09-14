@@ -45,7 +45,7 @@ public class PersonController {
         return new ResponseEntity<>(personService.getPersonByUsername(username), null, HttpStatus.OK);
     }
 
-    @GetMapping("/find-by-email/{phone}")
+    @GetMapping("/find-by-email/{email}")
     public ResponseEntity<PersonDto> findByEmail(@PathVariable String email) {
         return new ResponseEntity<>(personService.getPersonByEmail(email), null, HttpStatus.OK);
     }
